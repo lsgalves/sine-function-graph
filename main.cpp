@@ -40,9 +40,15 @@ int main(int argc, char *argv[]) {
 
     float v = -7;
     float seno[COLUNAS];
+	int aux;
 
 	for(i = 0; i < COLUNAS; i++){
 		seno[i] = sin(v);
+		aux = seno[i]*LINHAS;
+		if(aux < 0){
+			aux *= -1;
+		}
+		x[aux][i] = '+';
 		v += py;
 	}
 
