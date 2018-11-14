@@ -52,12 +52,6 @@ int main(int argc, char *argv[]) {
 		v += py;
 	}
 
-    int aux;
-    for(i = 0; i < COLUNAS; i++){
-        aux = seno[i]*LINHAS;
-        x[aux][i] = '+';
-    }
-
 	//PRINTANDO A MATRIZ
 	printf("\n");
 	for(i = 0; i < LINHAS; i++){
