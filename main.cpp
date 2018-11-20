@@ -2,17 +2,18 @@
 #include <stdio.h>
 #include <math.h>
 
-// UTILIZAR O ARGUMENTO -lm PARA A FUNÇÃO SIN(X)
+// UTILIZAR O ARGUMENTO -lm PARA A FUN��O SIN(X)
 
 #define LINHAS 25
-#define COLUNAS 80
+#define COLUNAS 85
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
-	float px, py;
+	float px, py, v = -7, seno[COLUNAS];
 	float lins, cols;
-	int i, j;
+	int i, j, aux;
+	char x[LINHAS][COLUNAS];
 
 	lins = 1;
 	cols = 10;
@@ -20,10 +21,7 @@ int main(int argc, char *argv[]) {
 	py = (lins -(-lins))/LINHAS;
 	px = (cols -(-cols))/COLUNAS;
 
-	//DECLARANDO A MATRIZ LINHAS | COLUNAS
-	char x[LINHAS][COLUNAS];
-
-	//CRIANDO PLANO CARTESIANO
+	// CRIANDO PLANO CARTESIANO
 	for(i = 0; i < LINHAS; i++){
 		for(j = 0; j < COLUNAS; j++){
 			if((i == (LINHAS/2)) && (j == (COLUNAS/2))){
@@ -38,21 +36,20 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-    float v = -7;
-    float seno[COLUNAS];
-	int aux;
-
 	for(i = 0; i < COLUNAS; i++){
 		seno[i] = sin(v);
-		aux = seno[i]*LINHAS;
-		if(aux < 0){
+		aux = seno[i]/py;
+		if(aux > 0){
+			aux = LINHAS/2 + aux;
+		}else{
 			aux *= -1;
+			aux = LINHAS/2 - aux;
 		}
 		x[aux][i] = '+';
-		v += py;
+		v += px;
 	}
 
-	//PRINTANDO A MATRIZ
+	// PRINTANDO A MATRIZ
 	printf("\n");
 	for(i = 0; i < LINHAS; i++){
 		for(j = 0; j < COLUNAS; j++){
