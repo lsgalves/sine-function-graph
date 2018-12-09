@@ -1,13 +1,8 @@
 #include <iostream>
-#include <stdio.h>
 #include <math.h>
-
-// UTILIZAR O ARGUMENTO -lm PARA A FUN��O SIN(X)
 
 #define LINHAS 25
 #define COLUNAS 85
-
-using namespace std;
 
 int main(int argc, char *argv[]) {
 	float px, py, v = -7, seno[COLUNAS];
@@ -36,6 +31,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
+	// CRIANDO A FUNCAO SENO
 	for(i = 0; i < COLUNAS; i++){
 		seno[i] = sin(v);
 		aux = seno[i]/py;
@@ -50,12 +46,12 @@ int main(int argc, char *argv[]) {
 	}
 
 	// PRINTANDO A MATRIZ
-	printf("\n");
+	std::cout << std::endl;
 	for(i = 0; i < LINHAS; i++){
 		for(j = 0; j < COLUNAS; j++){
-			printf("%c", x[i][j]);
+			std::cout << x[i][j];
 		}
-		printf("\n");
+		std::cout << std::endl;
 	}
 
 	return 0;
