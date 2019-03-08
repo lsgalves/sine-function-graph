@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 
 	// CRIANDO PLANO CARTESIANO
 	for (i = 0; i < LINHAS; i++) {
-		for (j = 0; j < COLUNAS; j++){
+		for (j = 0; j < COLUNAS; j++) {
 			if ((i == (LINHAS / 2)) && (j == (COLUNAS / 2))) {
 				x[i][j] = '+';
 			} else if (i == (LINHAS/2)) {
