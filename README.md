@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is an algorithm built in **C++** to generate a graph on the sine function.
+This is an algorithm built in **C** to generate a graph on the sine function.
 
 ### Running
 
