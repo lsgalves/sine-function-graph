@@ -8,7 +8,7 @@ This is an algorithm built in **C** to generate a graph on the sine function.
 
 Clone this repository
 
-`git clone https://github.com/LeonardoGalves/sine-function-graph.git`
+`git clone https://github.com/lsgalves/sine-function-graph.git`
 
 Enter inside the directory
 
@@ -32,4 +32,4 @@ Clean binary file
 
 ## License
 
-[MIT](https://github.com/LeonardoGalves/sine-function-graph/blob/master/LICENSE)
+[MIT](https://github.com/lsgalves/sine-function-graph/blob/master/LICENSE)
